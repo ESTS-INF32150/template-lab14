@@ -33,10 +33,10 @@
 - Crie a classe `MyProductsMenu` que extende a classe `MenuBar`
 
 - Crie o método privado `draw()` que chamada no construtor e onde deve efetuar a criação dos seguintes menus:
-
+  
   - `Home`- Menu com o título "Home" e que deverá conter o `MenuItem` "Exit". Esta opção deverá permitir sair da aplicação. Para sair da aplicação utiliza a instrução `Platform.exit();`
   - `Settings` - Menu com o título "Settings" e que deverá conter o `MenuItem` "Create Sample Data". Ao escolher esta opção deverão ser criados registos de teste chamando o método `CreateSampleData` da classe `Products`.
-  
+
 - Na aplicação principal (MyProducts) crie um Pane do tipo `BorderPane` que deverá chamar `root`.
 
 - Adicione um Pane do tipo `VBox` ao topo do `BorderPane`.
@@ -50,7 +50,7 @@
 Pretende-se neste nível criar a lista de produtos existentes.
 
 - Crie a classe `ProductsPane` que extende a classe `ListView<Product>` com o seguinte atributo:
-
+  
   - `productsList`- `ObservableList<Product>`, lista observável que será utilizada no objeto do tipo `ListView`
 
 - Crie um construtor que recebe como parametro um objeto do tipo `Products`
@@ -70,7 +70,7 @@ Pretende-se neste nível criar a lista de produtos existentes.
 
 ```java
     setPadding(new Insets(10, 10, 10, 10));
-    
+
     setCellFactory((ListView<Product> listview) -> {
         ListCell<Product> cell = new ListCell<Product>() {
             @Override
@@ -89,7 +89,6 @@ Pretende-se neste nível criar a lista de produtos existentes.
 ```
 
 - - Adicione ainda à classe o método seletor da lista criada
-
 
 - Na classe principal da aplicação adicione o objeto `ProductsPane` ao centro do `BorderPane`. Utilize como Lista de produtos a informação de exemplo fornecida e que pode ser acedida por ficheiro.
 
@@ -120,6 +119,8 @@ A partir deste nível pretende-se criar a lógica de gestão da lista de produto
     top.getScene().setRoot(new ProductPane(root, productsPane.getProductsList(), p)); //altera o painel existente na cena que existe no palco
   }
 ```
+
+- Insira uma  imagem (logotipo do IPS Setúbal fornecido) no canto superior direito da janela .
 
 **Notas**:
 
